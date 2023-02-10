@@ -1,0 +1,104 @@
+
+l3=[[[['python',15,16,53,(16,15)]],'Html'],('python')]
+for i in l3:
+  if type(i)==str:
+      for j in i:
+          print(j)
+  if type(i) == list:
+      for j in i:
+          if type(j)==str:
+              for k in j:
+                  print(k)
+          if type(j)==list:
+              for k in j:
+                  for m in k:
+                      if type(m)==tuple:
+                          for n in m :
+                              print(n)
+                      if type(m)==str:
+                          for n in m:
+                               print(n)
+                               
+                               
+                      if type(m) != tuple and type(m) != str:
+                          print(m)
+...
+...
+....
+..
+print("welcome to questionaire")
+count=0;
+def remarks (count):
+    if count==3:
+        print("excellent keep it up")
+    if count==2:
+        print(" good do more practice")
+    if count <=1:
+        print("average ,put some effort")
+print("press 1 to play and any key to exit")
+key=int(input("enter 1 to play and other key to exit\n"))
+if key == 1:
+    a=int(input("1.where is the capital of india? \n 1.delhi \n 2.mumbai \n 3.kolkata\n"))
+    if a == 1 :
+        count += 1;
+    b=int(input("2.who is the prime minister of india? \n 1.sashi tharoor \n 2.rahul gandhi \n 3.narendra modi \n")) 
+    if b==3:
+        count +=1;
+    c=int(input("3.who is the foreign minister of India? \n 1.nirav modi \n 2.mr. jaishankar \n 3. amit shah \n"))
+    if c== 2:
+        count +=1;
+    print("thank you for attending the quiz .\n you score is: ",count)
+    remarks(count)
+
+else :
+    exit()
+......
+......
+.....
+#table through array
+
+from array import *
+a=array("i",[])
+c=int(input("which table do you want\n"))
+d=c*10+1
+for i in range(c,d,c):
+    a.append(i)
+    print(i)
+....
+....
+....
+....
+
+print("""--------WELCOME TO BIKE SERVICES--------""")
+RentBike=['A','B','C']
+PurchaseBike=['B','C','D']
+nrb=len(RentBike)
+npb=len(PurchaseBike)
+print("""do you want to purchase bike or rent bike
+press 1 to purchase and press 2 to rent""")
+choice=int(input("enter choice \n"))
+if choice == 1:
+    print("""we have these models to sell,
+    which model do you want?\n""",PurchaseBike)
+    pbchoice=input("enter bike name in capital letter from above\n")
+    if pbchoice=='B':
+        print("""the price of this model is : 100000
+        how many do you want to purchase\n""")
+        number=int(input("enter no bike u want to purchase\n"))
+        npb -= number
+        print("remaining bike of this model is ",npb)
+        print("thank you for purchasing")
+        
+if choice==2:
+        
+    print("""we have these models for rent
+    which bike do you want to rent?\n""",RentBike)
+    rbchoice=input("enter bike name in capital letter from above\n")
+    if rbchoice=='A':
+        print("the price of renting this model per hour is 250rs")
+        print("how many do you want rent")
+        number=int(input("enter number of bike for rent\n"))
+        nrb -= number
+        print("remaining bike for renting of this model is:",nrb)
+        print("....thank you for renting....")
+
